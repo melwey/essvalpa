@@ -1,0 +1,79 @@
+---
+title: "Ecosystem valuation in protected areas"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Global Mapping of Ecosystem Services
+Ecosystem services is a multidimensional concept, which may be expressed in ecosystem service potential, capacity, supply, provision, flow, use, demand and value. The economic value of the ecosystem services provided by PAs depends on ecosystem supply and demand. Typically, ecosystem service supply is measured in quantitative biophysical units (e.g. tons of carbon captured, m³ water supplied) and it is determined by ecosystem functions and processes within the PA. Ecosystem service demand is mainly determined by the socio-economic characteristics of a PA, such as the number of beneficiaries being able to access an ecosystem service, their individual preferences and income levels. Within this context we started to develop and map a series of large scale ecosystem service indicators that allow us to quantify different dimensions of ecosystem services for protected areas worldwide. Aim is to present first indicators on the IUCN World Conservation Congress within the BIOPAMA RIS. 
+
+# Methodology
+Use the new World Ecosystems map (Sayre et al. 2020), combined with CIFOR Tropical Wetlands (Gumbricht et al. (2017) An expert system model for mapping tropical wetlands and peatlands reveals South America as the largest contributor. Global Change Biology. DOI: 10.1111/gcb.13689) and marine ecosystems (MEOW) and Pelagic Provinces of the World (PPOW), as a base map to compare different methods of ecosystems valuation at global level.
+
+## V1 (Costanza 1997):
+### Reproduce the land cover map
+#### Marine
+
+Open Ocean (data.unep-wcmc.org (used for DOPA: MEOW + PPOW, subtract everything else {coastal})
+```{r, include=FALSE}
+# ecoregions_2019[source == "ppow"]
+```
+
+Coastal (overlaps: take the more valuable class)
+
+Shelf: Ecoregions, pelagic provinces (DOPA ecoregions) (select all source: meow)
+```{r, include=FALSE}
+# ecoregions_2019[source == "meow"]
+```
+
+Estuaries: (data.unep-wcmc.org): raster data set https://data.unep-wcmc.org/datasets/23
+```{r, include=FALSE}
+# /Users/mela/Documents/JRC/BIOPAMA/ESS/data/DownloadPack-14_001_UBC003_SAU_Estuaries2003_v2/01_Data/14_001_UBC003_SAU_Estuaries2003_v2.shp
+```
+Seagrass/Algae Beds: (data.unep-wcmc.org): points and polygons, we take polygons only https://data.unep-wcmc.org/datasets/7
+```{r, include = FALSE}
+# /Users/mela/Documents/JRC/BIOPAMA/ESS/data/WCMC_SeagrassPtPy2018_v6/01_Data/WCMC_013_014_SeagrassesPy_v6.shp
+```
+
+Coral Reefs (data.unep-wcmc.org): 
+warm water corals: vector points and shapes,
+https://data.unep-wcmc.org/datasets/1
+ cold water corals: suitability modelling, but does not make sense for us
+```{r, include = FALSE}
+#/Users/mela/Documents/JRC/BIOPAMA/ESS/data/WCMC_SeagrassPtPy2018_v6/01_Data/WCMC_013_014_SeagrassesPy_v6.shp
+```
+
+#### Terrestrial
+For terrestrial biomes, we use mainly the World Ecosystems (sayre et al. 2020). For wetlands, we rely on CIFOR tropical and subtropical wetlands. In temperate regions, on saltmarshes.
+
+Forest
+
+Tropical
+
+Temperate/Boreal (Biomes nr. 12, 4, 8, 5, 6, 10, 11, 
+Grass/Rangelands
+Wetlands
+Tidal Marsh/Mangroves (saltmarshes: https://data.unep-wcmc.org/datasets/43; mangrove: https://data.unep-wcmc.org/datasets/45)
+Swamps/Floodplains (Copernicus, cifor.org/global-wetland, incomplete)
+Lakes/Rivers (Copernicus inland water)
+Desert Ecoregions: biome_code = 13
+Tundra Ecoregions: biome_code = 11
+Ice/Rock (Copernicus)
+Cropland (Copernicus)
+Urban (Copernicus, built up)
+Build one global dataset:
+start with the lowest value to have the highest value show up on top
+
+
+
+Write the script
+iterate over polygons
+run zonal stats
+
+
+```{python, engine.path = '/usr/local/bin/python3'}
+import sys
+print(sys.version)
+```
