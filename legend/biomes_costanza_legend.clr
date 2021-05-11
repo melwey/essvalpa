@@ -1,0 +1,18 @@
+11 64 251 58 255 Boreal forest
+12 57 221 51 255 Temperate forest
+13 47 183 42 255 Subtropical forest
+14 31 124 29 255 Tropical forest
+20 216 200 33 255 Grassland
+31 88 161 113 255 Coastal wetlands/Mangrove
+32 61 145 169 255 Inland wetlands/Floodplain
+40 55 139 195 255 Inland open water
+50 226 207 80 255 Desert
+60 204 230 243 255 Tundra
+70 211 211 214 255 Ice/rock
+80 238 114 106 255 Cropland
+90 241 23 25 255 Urban
+100 184 221 235 255 Open ocean
+200 117 171 186 255 Shelf
+201 31 211 211 255 Estuaries
+202 61 145 169 255 Seagrass beds
+203 244 112 30 255 Coral reefs

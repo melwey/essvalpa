@@ -1,0 +1,6 @@
+# R Generated Color Map File
+INTERPOLATION:EXACT
+5100,255,130,71,255, "Cool Temperate Moist Shrubland on Tablelands"
+5115,127,255,0,255, "Cool Temperate Moist Shrubland on Plains"
+8100,255,130,71,255, "Cool Temperate Moist Shrubland on Tablelands"
+8115,127,255,0,255, "Cool Temperate Moist Shrubland on Plains"

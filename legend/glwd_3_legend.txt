@@ -1,0 +1,14 @@
+# QGIS Generated Color Map Export File
+INTERPOLATION:EXACT
+1,18,4,147,255,Lake
+2,189,10,22,255,Reservoir
+3,163,23,227,255,River
+4,20,130,226,255,Freshwater Marsh, Floodplain
+5,120,130,73,255,Swamp Forest, Flooded Forest
+6,235,164,101,255,Coastal Wetland
+7,251,218,67,255,Pan, Brakish/Saline Wetland
+8,95,41,18,255,Bog, Fen, Mire (Peatland)
+9,67,224,239,255,Intermittent Wetland/Lake
+10,47,77,24,255,50-100 % Wetland
+11,109,124,24,255,25-50 % Wetland
+12,86,169,83,255,Wetland Complex (0-25 % Wetland)

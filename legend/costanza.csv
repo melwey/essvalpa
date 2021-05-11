@@ -1,0 +1,26 @@
+#Total Value per ha	Total Value per ha
+#2007$/ha/yr	2007$/ha/yr
+label,USD_ha_1997,USD_ha_2011
+Marine,796,1368 
+Open ocean,348,660 
+Coastal,5592,8944.04 
+Estuaries,31509,28916 
+Seagrass beds,26226,28916 
+Coral reefs,8384,352257 
+Shelf,2222,2222 
+Terrestrial,1109,4901 
+Forest,1338,3800 
+Tropical forest,2769,5382 
+Subtropical forest,2769,5382
+Temperate forest,417,3137 
+Boreal forest,417,3137
+Grassland,321,4166 
+Wetlands,20404,140174 
+Coastal wetlands/Mangrove,13786,193843 
+Inland wetlands/Floodplain,27021,25681 
+Inland open water/lakes/rivers,11727,12512 
+Desert,,
+Tundra,,
+Ice/Rock,,
+Cropland,126,5567 
+Urban,,6661 
